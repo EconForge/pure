@@ -22,6 +22,10 @@
         <title>{% block title %}{{ SITENAME }} // {{ TAGLINE }}{% endblock title %}</title>
     {% endblock head %}
 
+    {% if EXTRA_HEADER %}
+        {{ EXTRA_HEADER }}
+    {% endif %}
+
     {% if FAVICON %}
     <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
     {% endif %}
